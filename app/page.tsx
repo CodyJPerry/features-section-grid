@@ -8,7 +8,7 @@ import features from './data/features';
 export default function Home() {
   console.log('featues =>', features);
   return (
-    <main className='bg-white m-4 shadow-sm rounded'>
+    <main className='bg-white m-4 shadow-sm rounded py-12 px-3'>
       <section>
         <h1 className='text-3xl font-semibold text-neutral-900'>
           Easy access to top quality images
