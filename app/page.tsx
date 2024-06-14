@@ -17,6 +17,14 @@ export default function Home() {
           groundbreaking images designed for your presentation excellence.
         </p>
       </section>
+      {/* Map over the features collection to display each feature */}
+      {features.map(({ id, icon, title, description }) => (
+        <div key={id}>
+          {icon}
+          <p>{title}</p>
+          <p>{description}</p>
+        </div>
+      ))}
     </main>
   );
 }
