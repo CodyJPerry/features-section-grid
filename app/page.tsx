@@ -5,7 +5,14 @@ import Image from 'next/image';
 // Import our features
 import features from './data/features';
 
-export default function Home() {
+interface Feature {
+  id: number;
+  icon: JSX.Element;
+  title: string;
+  description: string;
+}
+
+export default function Home(): JSX.Element {
   console.log('featues =>', features);
   return (
     <main className='bg-white m-4 shadow-sm md:shadow-md lg:shadow-lg rounded md:rounded-md py-12 md:py-16 lg:py-24 px-3 md:px-4 lg:px-24 container mx-auto'>
@@ -23,7 +30,7 @@ export default function Home() {
       </section>
       {/* Map over the features collection to display each feature */}
       <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-x-8 lg:gap-y-12'>
-        {features.map(({ id, icon, title, description }) => (
+        {features.map(({ id, icon, title, description }: Feature) => (
           <div key={id} className='flex flex-col items-center text-center'>
             <span className='h-12 w-12 bg-white rounded-full shadow flex items-center justify-center p-3 mb-5'>
               {icon}
