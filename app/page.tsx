@@ -22,12 +22,9 @@ export default function Home() {
         </p>
       </section>
       {/* Map over the features collection to display each feature */}
-      <section className='grid grid-cols-1 md:grid-cols-2 md:gap-8'>
+      <section className='grid grid-cols-1 md:grid-cols-2 gap-8'>
         {features.map(({ id, icon, title, description }) => (
-          <div
-            key={id}
-            className='flex flex-col items-center text-center mb-8 last:mb-0'
-          >
+          <div key={id} className='flex flex-col items-center text-center'>
             <span className='h-12 w-12 bg-white rounded-full shadow flex items-center justify-center p-3 mb-5'>
               {icon}
             </span>
