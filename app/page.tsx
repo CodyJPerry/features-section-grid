@@ -23,12 +23,15 @@ export default function Home() {
       </section>
       {/* Map over the features collection to display each feature */}
       {features.map(({ id, icon, title, description }) => (
-        <div key={id} className='flex flex-col items-center text-center'>
+        <div
+          key={id}
+          className='flex flex-col items-center text-center mb-8 last:mb-0'
+        >
           <span className='h-12 w-12 bg-white rounded-full shadow flex items-center justify-center p-3 mb-5'>
             {icon}
           </span>
           <p className='text-xl font-semibold text-neutral-900 mb-2'>{title}</p>
-          <p className='text-base font-normal text-neutral-600 mb-8'>
+          <p className='text-base font-normal text-neutral-600'>
             {description}
           </p>
         </div>
